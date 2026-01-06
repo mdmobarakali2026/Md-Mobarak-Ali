@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krikya Official - Signup & Bonus</title>
+    <title>Krikya Official - Signup</title>
     
     <style>
-        /* এনিমেশন: বর্ডার লাইটিং */
         @keyframes borderGlow {
             0% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
             50% { border-color: #ff0055; box-shadow: 0 0 30px #ff0055; }
@@ -36,14 +35,23 @@
             animation: borderGlow 4s infinite;
         }
 
-        /* হেডার ইমেজ */
+        /* উপরের KRIKYA লোগো স্টাইল */
+        .header-logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #f0b90b;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px #f0b90b, 0 0 20px #f0b90b;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
         .hero-img {
             width: 100%;
             border-radius: 15px;
             margin-bottom: 15px;
         }
 
-        /* গেম ক্যাটাগরি লোগো স্টাইল */
         .game-categories {
             display: flex;
             justify-content: space-around;
@@ -62,41 +70,14 @@
             color: #f0b90b;
         }
 
-        .category-item img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 5px;
-        }
+        .category-item img { width: 35px; height: 35px; margin-bottom: 5px; }
 
-        /* বোনাস সেকশন */
         .bonus-section {
             background: linear-gradient(135deg, #222, #000);
             border: 1px solid #f0b90b;
             border-radius: 15px;
             padding: 15px;
             margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bonus-section::before {
-            content: "HOT";
-            position: absolute;
-            top: 5px;
-            right: -15px;
-            background: red;
-            color: white;
-            font-size: 10px;
-            padding: 2px 20px;
-            transform: rotate(45deg);
-            font-weight: bold;
-        }
-
-        .bonus-title {
-            color: #f0b90b;
-            font-weight: bold;
-            font-size: 1.1rem;
-            display: block;
         }
 
         .bonus-amount {
@@ -106,7 +87,6 @@
             text-shadow: 0 0 10px #f0b90b;
         }
 
-        /* বাটন স্টাইল */
         .btn {
             display: block;
             padding: 16px;
@@ -115,66 +95,35 @@
             font-weight: bold;
             text-decoration: none;
             margin-bottom: 12px;
-            transition: 0.3s;
             text-transform: uppercase;
         }
 
-        .btn-signup {
-            background: linear-gradient(90deg, #00c853, #b2ff59);
-            color: #000;
-            box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
-        }
-
-        .btn-claim {
-            background: linear-gradient(90deg, #f0b90b, #ffcc00);
-            color: #000;
-            box-shadow: 0 4px 15px rgba(240, 185, 11, 0.4);
-        }
-
-        .btn:hover { transform: scale(1.03); }
-
+        .btn-signup { background: linear-gradient(90deg, #00c853, #b2ff59); color: #000; }
+        .btn-claim { background: linear-gradient(90deg, #f0b90b, #ffcc00); color: #000; }
     </style>
 </head>
 <body>
 
     <div class="main-card">
+        <div class="header-logo">KRIKYA</div>
+
         <img src="https://raw.githubusercontent.com/krikya2026bd/krikya-bd-2026/main/images%20-%202026-01-05T131733.152.jpeg" alt="Krikya Promo" class="hero-img">
         
-        <h2 style="color: #f0b90b; margin-top: 0;">OFFICIAL PARTNER</h2>
-
         <div class="game-categories">
-            <div class="category-item">
-                <img src="https://img.icons8.com/color/96/cricket.png" alt="Cricket">
-                <span>CRICKET</span>
-            </div>
-            <div class="category-item">
-                <img src="https://img.icons8.com/color/96/slot-machine.png" alt="Slots">
-                <span>SLOTS</span>
-            </div>
-            <div class="category-item">
-                <img src="https://img.icons8.com/color/96/roulette.png" alt="Casino">
-                <span>CASINO</span>
-            </div>
-            <div class="category-item">
-                <img src="https://img.icons8.com/color/96/airplane-take-off.png" alt="Aviator">
-                <span>AVIATOR</span>
-            </div>
+            <div class="category-item"><img src="https://img.icons8.com/color/96/cricket.png"><span>CRICKET</span></div>
+            <div class="category-item"><img src="https://img.icons8.com/color/96/slot-machine.png"><span>SLOTS</span></div>
+            <div class="category-item"><img src="https://img.icons8.com/color/96/roulette.png"><span>CASINO</span></div>
+            <div class="category-item"><img src="https://img.icons8.com/color/96/airplane-take-off.png"><span>AVIATOR</span></div>
         </div>
 
         <div class="bonus-section">
-            <span class="bonus-title">🏏 CRICKET WELCOME BONUS</span>
+            <span style="color:#f0b90b; font-weight:bold;">WELCOME BONUS</span>
             <span class="bonus-amount">২০,০০০ BDT</span>
-            <p style="font-size: 0.8rem; color: #aaa; margin: 5px 0 0;">একচেটিয়া অফার - শুধুমাত্র নতুন গ্রাহকদের জন্য</p>
         </div>
 
-        <div class="btn-container">
-            <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-signup">📝 SIGN-UP NOW</a>
-            <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-claim">🎁 CLAIM BONUS</a>
-        </div>
+        <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-signup">📝 SIGN-UP NOW</a>
+        <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-claim">🎁 CLAIM BONUS</a>
 
-        <p style="color: #8b949e; font-size: 0.8rem; margin-top: 15px;">
-            ⚠️ শর্তাবলী প্রযোজ্য। ১৮+ দায়িত্বের সাথে খেলুন।
-        </p>
     </div>
 
 </body>
