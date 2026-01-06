@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krikya 2026 BD - Official</title>
+    <title>Krikya Official - Signup & Bonus</title>
     
     <style>
         /* এনিমেশন: বর্ডার লাইটিং */
         @keyframes borderGlow {
-            0% { border-color: #f0b90b; box-shadow: 0 0 10px #f0b90b; }
-            50% { border-color: #ff0055; box-shadow: 0 0 25px #ff0055; }
-            100% { border-color: #f0b90b; box-shadow: 0 0 10px #f0b90b; }
-        }
-
-        /* এনিমেশন: বাটনের জন্য */
-        @keyframes pulseEffect {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
+            50% { border-color: #ff0055; box-shadow: 0 0 30px #ff0055; }
+            100% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             background-color: #0d1117;
             color: white;
@@ -35,86 +28,111 @@
 
         .main-card {
             background: #161b22;
-            padding: 25px;
+            padding: 20px;
             border-radius: 20px;
             border: 3px solid #f0b90b;
-            max-width: 400px;
-            width: 90%;
+            max-width: 420px;
+            width: 92%;
             animation: borderGlow 4s infinite;
         }
 
+        /* হেডার ইমেজ */
         .hero-img {
             width: 100%;
             border-radius: 15px;
             margin-bottom: 15px;
+        }
+
+        /* গেম ক্যাটাগরি লোগো স্টাইল */
+        .game-categories {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            background: #0d1117;
+            padding: 10px;
+            border-radius: 12px;
             border: 1px solid #30363d;
         }
 
-        h1 { color: #f0b90b; font-size: 1.8rem; margin: 10px 0; }
-
-        .games-list {
+        .category-item {
             display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #f0b90b;
         }
-        .game-tag {
-            background: #30363d;
-            padding: 5px 10px;
-            border-radius: 5px;
-            color: #ffcc00;
-            font-size: 0.8rem;
+
+        .category-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+
+        /* বোনাস সেকশন */
+        .bonus-section {
+            background: linear-gradient(135deg, #222, #000);
+            border: 1px solid #f0b90b;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-section::before {
+            content: "HOT";
+            position: absolute;
+            top: 5px;
+            right: -15px;
+            background: red;
+            color: white;
+            font-size: 10px;
+            padding: 2px 20px;
+            transform: rotate(45deg);
             font-weight: bold;
         }
 
-        .bonus-banner {
-            background: linear-gradient(45deg, #ff0055, #ffcc00);
-            padding: 15px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-        .bonus-amount {
-            font-size: 2rem;
+        .bonus-title {
+            color: #f0b90b;
+            font-weight: bold;
+            font-size: 1.1rem;
             display: block;
-            font-weight: 900;
-            color: #fff;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
 
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        .bonus-amount {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 0 10px #f0b90b;
+        }
+
+        /* বাটন স্টাইল */
+        .btn {
+            display: block;
+            padding: 16px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: 0.3s;
+            text-transform: uppercase;
         }
 
         .btn-signup {
             background: linear-gradient(90deg, #00c853, #b2ff59);
             color: #000;
-            padding: 15px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            animation: pulseEffect 2s infinite;
+            box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
         }
 
         .btn-claim {
-            background: linear-gradient(90deg, #f0b90b, #ff5722);
-            color: #fff;
-            padding: 15px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            animation: pulseEffect 1.5s infinite;
+            background: linear-gradient(90deg, #f0b90b, #ffcc00);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(240, 185, 11, 0.4);
         }
 
-        .footer-text {
-            margin-top: 15px;
-            color: #8b949e;
-            font-size: 0.8rem;
-        }
+        .btn:hover { transform: scale(1.03); }
+
     </style>
 </head>
 <body>
@@ -122,25 +140,41 @@
     <div class="main-card">
         <img src="https://raw.githubusercontent.com/krikya2026bd/krikya-bd-2026/main/images%20-%202026-01-05T131733.152.jpeg" alt="Krikya Promo" class="hero-img">
         
-        <h1>🚀 KRIKYA 2026 BD 🚀</h1>
-        
-        <div class="games-list">
-            <span class="game-tag">✈️ Aviator</span>
-            <span class="game-tag">🎡 Roulette</span>
-            <span class="game-tag">🎲 Crazy Time</span>
+        <h2 style="color: #f0b90b; margin-top: 0;">OFFICIAL PARTNER</h2>
+
+        <div class="game-categories">
+            <div class="category-item">
+                <img src="https://img.icons8.com/color/96/cricket.png" alt="Cricket">
+                <span>CRICKET</span>
+            </div>
+            <div class="category-item">
+                <img src="https://img.icons8.com/color/96/slot-machine.png" alt="Slots">
+                <span>SLOTS</span>
+            </div>
+            <div class="category-item">
+                <img src="https://img.icons8.com/color/96/roulette.png" alt="Casino">
+                <span>CASINO</span>
+            </div>
+            <div class="category-item">
+                <img src="https://img.icons8.com/color/96/airplane-take-off.png" alt="Aviator">
+                <span>AVIATOR</span>
+            </div>
         </div>
 
-        <div class="bonus-banner">
-            <span style="font-weight: bold;">WELCOME BONUS</span>
-            <span class="bonus-amount">২০,০০০ BDT 💰</span>
+        <div class="bonus-section">
+            <span class="bonus-title">🏏 CRICKET WELCOME BONUS</span>
+            <span class="bonus-amount">২০,০০০ BDT</span>
+            <p style="font-size: 0.8rem; color: #aaa; margin: 5px 0 0;">একচেটিয়া অফার - শুধুমাত্র নতুন গ্রাহকদের জন্য</p>
         </div>
 
         <div class="btn-container">
-            <a href="https://www.krikya11.club/?af=AG044301" class="btn-signup">📝 SIGN-UP NOW</a>
-            <a href="https://www.krikya11.club/?af=AG044301" class="btn-claim">🎁 CLAIM BONUS NOW</a>
+            <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-signup">📝 SIGN-UP NOW</a>
+            <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-claim">🎁 CLAIM BONUS</a>
         </div>
 
-        <p class="footer-text">অফারটি সীমিত সময়ের জন্য। এখনই যোগ দিন!</p>
+        <p style="color: #8b949e; font-size: 0.8rem; margin-top: 15px;">
+            ⚠️ শর্তাবলী প্রযোজ্য। ১৮+ দায়িত্বের সাথে খেলুন।
+        </p>
     </div>
 
 </body>
