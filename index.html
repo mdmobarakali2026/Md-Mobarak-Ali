@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRIKYA Official - Sign Up</title>
+    <title>KRIKYA Official - Fast Payout</title>
     <style>
-        /* এনিমেশন: পুরো কার্ডের লাইটিং বর্ডার */
         @keyframes borderGlow {
             0% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
             50% { border-color: #ff0055; box-shadow: 0 0 30px #ff0055; }
             100% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
         }
 
-        /* সাইন-আপ বাটনের পালস এনিমেশন */
         @keyframes signupPulse {
             0% { transform: scale(1); box-shadow: 0 0 10px #00c853; }
             50% { transform: scale(1.05); box-shadow: 0 0 30px #00c853; }
@@ -50,46 +48,47 @@
             font-style: italic;
         }
 
-        /* নতুন ফিচার: লাইভ উইনিং স্ট্যাটাস */
+        /* স্পিড সেকশন */
+        .speed-box {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            border: 1px solid #00d2ff;
+            border-radius: 15px;
+            padding: 12px;
+            margin: 15px 0 10px;
+        }
+
+        .speed-text {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* পেমেন্ট মেথড লোগো স্টাইল */
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .payment-methods img {
+            height: 25px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .live-win-box {
             background: rgba(0, 200, 83, 0.1);
             border: 1px dashed #00c853;
             border-radius: 12px;
-            padding: 10px;
-            margin: 15px 0;
-            font-size: 0.9rem;
+            padding: 8px;
+            margin: 10px 0;
+            font-size: 0.85rem;
             color: #b2ff59;
-        }
-
-        /* নতুন ফিচার: ১০০% উইনিং রেট ব্যানার */
-        .promo-box {
-            background: linear-gradient(135deg, #000, #333);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 1px solid #f0b90b;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .promo-box::after {
-            content: "FAST PAYOUT";
-            position: absolute;
-            top: 5px;
-            right: -15px;
-            background: #f0b90b;
-            color: black;
-            font-size: 8px;
-            padding: 2px 15px;
-            transform: rotate(45deg);
-            font-weight: bold;
-        }
-
-        .promo-text {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1.2;
         }
 
         .icon-grid {
@@ -136,9 +135,18 @@
             🟢 <span id="win-text">Sabbir*** just won 5,400 BDT in Aviator!</span>
         </div>
 
-        <div class="promo-box">
-            <span style="color: #f0b90b; font-size: 0.8rem;">TRUSTED PLATFORM 2026</span>
-            <div class="promo-text">100% FAST DEPOSIT & <br>WITHDRAWAL ✅</div>
+        <div class="speed-box">
+            <div class="speed-text">
+                ⚡ ডিপোজিট এবং উত্তোলন <br>
+                <span style="color: #ffcc00;">১ মিনিটের মধ্যে সম্পন্ন!</span>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/bkash.png" alt="bkash">
+            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/nagad.png" alt="nagad">
+            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/rocket.png" alt="rocket">
+            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/upay.png" alt="upay">
         </div>
 
         <div class="icon-grid">
@@ -155,7 +163,6 @@
     </div>
 
     <script>
-        // লাইভ উইনারদের নাম পরিবর্তন করার স্ক্রিপ্ট
         const winners = [
             "Sabbir*** just won 5,400 BDT in Aviator!",
             "Mintu*** just won 12,000 BDT in Slots!",
