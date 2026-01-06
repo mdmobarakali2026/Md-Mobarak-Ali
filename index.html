@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krikya-BD-2026 - Official BPL Portal</title>
+    <title>Krikya 2026 BD - Official BPL Portal</title>
     <style>
         /* এনিমেশনসমূহ */
         @keyframes borderGlow {
@@ -16,11 +16,6 @@
             10% { transform: translateX(0); opacity: 1; }
             90% { transform: translateX(0); opacity: 1; }
             100% { transform: translateX(-100%); opacity: 0; }
-        }
-        @keyframes pulseBtn {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
         }
 
         body {
@@ -42,17 +37,17 @@
             position: relative;
         }
 
-        /* মোস্তাফিজুর রহমান থিম ইলাস্ট্রেশন (দুই সাইডে) */
-        .fizz-bg {
+        /* মোস্তাফিজুর বোলিং থিম (দুই পাশে) */
+        .fizz-img {
             position: absolute;
             top: 20px;
             width: 100px;
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.5;
             filter: drop-shadow(0 0 10px #00c853);
         }
-        .left-f { left: -35px; }
-        .right-f { right: -35px; transform: scaleX(-1); }
+        .fizz-left { left: -35px; }
+        .fizz-right { right: -35px; transform: scaleX(-1); }
 
         .card {
             background: #1e2329;
@@ -61,7 +56,6 @@
             border: 3px solid #f0b90b;
             text-align: center;
             animation: borderGlow 4s infinite;
-            backdrop-filter: blur(10px);
         }
 
         .bpl-badge {
@@ -100,12 +94,10 @@
             font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 20px;
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.3);
         }
 
-        /* রাইট স্লাইড উইন বক্স */
-        .live-win-box {
+        /* ১.৫ সেকেন্ড উইন স্লাইড */
+        .win-box {
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid #00c853;
             border-radius: 15px;
@@ -125,7 +117,6 @@
             position: absolute;
         }
 
-        /* সার্ভিস ইনফো */
         .info-section {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
@@ -136,7 +127,6 @@
         .info-item { display: flex; align-items: center; margin-bottom: 8px; font-size: 0.9rem; }
         .info-item span { color: #f0b90b; margin-right: 10px; font-weight: bold; }
 
-        /* পেমেন্ট সেকশন */
         .payment-row {
             display: flex;
             justify-content: space-around;
@@ -147,48 +137,37 @@
         }
         .payment-row b { font-size: 0.85rem; font-weight: 900; }
 
-        /* বাটনসমূহ */
-        .btn-group { display: flex; flex-direction: column; gap: 12px; }
         .btn {
             padding: 18px;
             border-radius: 50px;
             font-size: 1.6rem;
             font-weight: 900;
             text-decoration: none;
-            text-transform: uppercase;
             display: block;
+            margin-bottom: 12px;
             text-align: center;
         }
-        .btn-green {
-            background: #00c853;
-            color: #000;
-            animation: pulseBtn 2s infinite;
-            box-shadow: 0 5px 20px rgba(0, 200, 83, 0.4);
-        }
-        .btn-gold { 
-            background: #f0b90b; 
-            color: #000; 
-            box-shadow: 0 5px 20px rgba(240, 185, 11, 0.3);
-        }
+        .btn-green { background: #00c853; color: #000; box-shadow: 0 5px 15px rgba(0,200,83,0.4); }
+        .btn-gold { background: #f0b90b; color: #000; }
 
-        .footer-txt { font-size: 0.7rem; color: #777; margin-top: 20px; line-height: 1.4; }
+        .footer-txt { font-size: 0.7rem; color: #777; margin-top: 15px; }
         .animate-slide { animation: slideInRight 1.5s linear infinite; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="https://www.freeiconspng.com/uploads/cricket-player-png-23.png" class="fizz-bg left-f" alt="Mustafizur">
-        <img src="https://www.freeiconspng.com/uploads/cricket-player-png-23.png" class="fizz-bg right-f" alt="Mustafizur">
+        <img src="https://www.freeiconspng.com/uploads/cricket-player-png-23.png" class="fizz-img fizz-left" alt="Fizz">
+        <img src="https://www.freeiconspng.com/uploads/cricket-player-png-23.png" class="fizz-img fizz-right" alt="Fizz">
 
         <div class="card">
-            <div class="bpl-badge">BPL 2026 OFFICIAL PARTNER</div>
+            <div class="bpl-badge">BPL 2026 SPECIAL</div>
             <div class="logo">KRIKYA 2026 BD</div>
             <div class="sub-logo">TRUSTED PLATFORM</div>
             
             <div class="bonus-banner">WELCOME 100% BONUS <br> UP TO 20,000 BDT</div>
             
-            <div class="live-win-box">
+            <div class="win-box">
                 <div id="win-text"></div>
             </div>
 
@@ -196,7 +175,7 @@
                 <div class="info-item"><span>✓</span> দ্রুত ডিপোজিট (১ মিনিট)</div>
                 <div class="info-item"><span>✓</span> দ্রুত উইথড্রল (৫ মিনিট)</div>
                 <div class="info-item"><span>✓</span> মোস্তাফিজের সাথে বিপিএল ধামাকা</div>
-                <div class="info-item"><span>✓</span> ২৪/৭ কাস্টমার সাপোর্ট (বাংলায়)</div>
+                <div class="info-item"><span>✓</span> ২৪/৭ কাস্টমার সাপোর্ট</div>
             </div>
 
             <div class="payment-row">
@@ -206,27 +185,23 @@
                 <b style="color: #00adef;">Upay</b>
             </div>
 
-            <div class="btn-group">
-                <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-green">⚡ SIGN-UP NOW</a>
-                <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-gold">🎁 CLAIM BONUS</a>
-            </div>
+            <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-green">⚡ SIGN-UP NOW</a>
+            <a href="https://www.krikya11.club/?af=AG044301" class="btn btn-gold">🎁 CLAIM BONUS</a>
 
             <div class="footer-txt">
                 © 2026 KRIKYA 2026 BD | All Rights Reserved. <br>
-                মোস্তাফিজের সাথে খেলুন বিপিএল, জিতে নিন আকর্ষণীয় পুরস্কার!
+                মোস্তাফিজের সাথে খেলুন, জিতে নিন লাখ টাকা!
             </div>
         </div>
     </div>
 
     <script>
-        // প্লেয়ার উইনিং লিস্ট
         const winners = [
             { n: "Sabbir***", w: "5,450 BDT ✈️" },
             { n: "Mintu***", w: "12,800 BDT 🎰" },
             { n: "Rashed***", w: "3,200 BDT 🎡" },
             { n: "Ariful***", w: "7,500 BDT 🏏" },
-            { n: "Tanvir***", w: "15,200 BDT 🎰" },
-            { n: "Hossain***", w: "2,900 BDT 🎡" }
+            { n: "Tanvir***", w: "15,200 BDT 🎰" }
         ];
 
         let i = 0;
@@ -235,12 +210,12 @@
         function show() {
             txt.innerHTML = `<span style="color:#00c853">${winners[i].n}</span> <span style="color:white">WON</span> <span style="color:#ffa500">${winners[i].w}</span>`;
             txt.classList.remove('animate-slide');
-            void txt.offsetWidth; // এনিমেশন রিসেট করার জন্য
+            void txt.offsetWidth;
             txt.classList.add('animate-slide');
             i = (i + 1) % winners.length;
         }
 
-        setInterval(show, 1500); // প্রতি ১.৫ সেকেন্ড পরপর নতুন উইনার দেখাবে
+        setInterval(show, 1500); 
         show();
     </script>
 
