@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRIKYA Official - Live Wins</title>
+    <title>KRIKYA Official - Fast Payout</title>
     <style>
-        /* পুরো কার্ডের গ্লো এনিমেশন */
         @keyframes borderGlow {
             0% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
             50% { border-color: #ff0055; box-shadow: 0 0 30px #ff0055; }
             100% { border-color: #f0b90b; box-shadow: 0 0 15px #f0b90b; }
         }
 
-        /* রাইট স্লাইড এনিমেশন */
         @keyframes slideInRight {
             0% { transform: translateX(100%); opacity: 0; }
             10% { transform: translateX(0); opacity: 1; }
@@ -53,10 +51,9 @@
             font-style: italic;
         }
 
-        /* লাইভ উইন বক্স - গ্রিন বর্ডার */
         .live-win-box {
             background: rgba(0, 200, 83, 0.05);
-            border: 2px solid #00c853; /* গ্রিন বর্ডার */
+            border: 2px solid #00c853;
             border-radius: 12px;
             padding: 12px;
             margin: 10px 0;
@@ -76,10 +73,7 @@
             position: absolute;
         }
 
-        /* নামের কালার - গ্রিন */
         .user-name { color: #00c853; }
-        
-        /* Won এমাউন্ট ও গেমের কালার - অরেঞ্জ */
         .won-info { color: #ffa500; }
 
         .speed-box {
@@ -95,14 +89,19 @@
         .payment-methods {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            gap: 15px;
             background: #ffffff;
-            padding: 8px;
-            border-radius: 10px;
+            padding: 10px;
+            border-radius: 12px;
             margin-bottom: 15px;
         }
 
-        .payment-methods img { height: 25px; }
+        .payment-methods img {
+            height: 22px;
+            width: auto;
+            object-fit: contain;
+        }
 
         .icon-grid {
             display: flex;
@@ -125,13 +124,11 @@
             font-weight: bold;
             text-decoration: none;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
         .btn-green {
             background: linear-gradient(90deg, #00c853, #b2ff59);
             color: #000;
-            box-shadow: 0 0 15px rgba(0, 200, 83, 0.4);
         }
 
         .btn-gold {
@@ -139,10 +136,7 @@
             color: #000;
         }
 
-        /* স্লাইড এনিমেশন ক্লাস */
-        .animate-slide {
-            animation: slideInRight 4s linear infinite;
-        }
+        .animate-slide { animation: slideInRight 4s linear infinite; }
     </style>
 </head>
 <body>
@@ -166,10 +160,10 @@
         </div>
 
         <div class="payment-methods">
-            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/bkash.png" alt="bkash">
-            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/nagad.png" alt="nagad">
-            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/rocket.png" alt="rocket">
-            <img src="https://raw.githubusercontent.com/manik845/payment-logo/main/upay.png" alt="upay">
+            <img src="https://www.logo.wine/a/logo/BKash/BKash-Logo.wine.svg" alt="bkash">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Nagad_Logo.svg/1200px-Nagad_Logo.svg.png" alt="nagad">
+            <img src="https://e7.pngegg.com/pngimages/936/750/png-clipart-dutch-bangla-bank-mobile-banking-logo-rocket-others-thumbnail.png" alt="rocket">
+            <img src="https://seeklogo.com/images/U/upay-logo-8494B4E8F8-seeklogo.com.png" alt="upay">
         </div>
 
         <div class="icon-grid">
@@ -205,21 +199,15 @@
         const wonAmount = document.getElementById('won-amount');
 
         function startAnimation() {
-            // ডাটা আপডেট
             userName.innerText = winners[i].name;
             wonAmount.innerText = winners[i].info;
-            
-            // এনিমেশন রিস্টার্ট
             winContent.classList.remove('animate-slide');
-            void winContent.offsetWidth; // রিফ্লো
+            void winContent.offsetWidth; 
             winContent.classList.add('animate-slide');
-            
             i = (i + 1) % winners.length;
         }
 
-        // শুরুতে এনিমেশন চালু
         startAnimation();
-        // প্রতি ৪ সেকেন্ডে নতুন ডাটা এবং স্লাইড
         setInterval(startAnimation, 4000);
     </script>
 
